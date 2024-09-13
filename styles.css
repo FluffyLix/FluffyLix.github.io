@@ -1,22 +1,15 @@
 /* Navbar Styling */
 .navbar {
-    min-height: 150px;  /*Adjust the height to match the desired style */
+    min-height: 80px; /* Adjust the height to match the desired style */
     padding: 20px 30px;
-    background-color: white; /* Change background as needed */
+    background-color: white;
     border-bottom: 2px solid #C79ABA; /* Optional: Border below navbar */
 }
 
 /* Navbar logo image styling */
 .navbar-logo {
-    height: 100px; /* Adjust the logo height */
-    width: auto; /* Maintain the aspect ratio */
-    max-height: 100%;
-    margin-right: 10px;
-    vertical-align: middle; /* Vertically align the image */
-}
-.navbar-brand {
-    font-size: 64px; /* Use explicit pixel size for the font */
-    color: black; /* Text color */
+    height: 60px; /* Adjust the logo height */
+    width: auto; /* Maintain aspect ratio */
 }
 
 /* Ghost Image (Header Image) */
@@ -30,61 +23,61 @@
 }
 
 .indent_img {
-    max-height: 100%; /* Ensure the image fits within the wrapper */
-    max-width: 100%; /* Maintain aspect ratio */
+    max-height: 100%;
+    max-width: 100%;
     object-fit: contain;
 }
 
 /* Image Gallery */
 .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
-    gap: 20px; /* Space between images */
-    padding: 20px; /* Padding around the gallery */
-    justify-items: center; /* Centers images */
+    padding: 20px 0;
 }
 
 .image-gallery figure {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0; /* Reset margins on figure to avoid spacing issues */
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 .image-gallery img {
-    width: 567px;  /* Fixed width for all images */
-    height: 567px; /* Fixed height for all images */
-    object-fit: cover; /* Ensures images fill the area and maintain proportions */
-    border-radius: 8px; /* Adds rounding to the corners */
+    border-radius: 8px;
+    width: 100%;
+    height: 300px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* This ensures images fill the container while maintaining aspect ratio */
 }
 
 /* Optional: Add spacing below each image for captions */
 .image-gallery figcaption {
     text-align: center;
-    font-size: 18px; /* You can adjust this */
-    margin-top: 10px; /* Add space between image and text */
+    font-size: 16px;
+    margin-top: 10px;
     font-weight: bold;
 }
 
 .image-link {
-    text-decoration: none; /* Remove underline */
-    font-size: 64px; /* Adjust font size */
-    color: #007bff; /* Bootstrap default link color */
+    text-decoration: none;
+    color: #007bff;
 }
 
 .image-link:hover {
-    text-decoration: underline; /* Optional: Add underline on hover */
+    text-decoration: underline;
 }
 
-/* Responsive layout for smaller screens */
+/* Responsive layout */
 @media (max-width: 768px) {
-    .image-gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    .navbar-brand {
+        font-size: 28px;
     }
 }
 
-@media (max-width: 480px) {
-    .image-gallery {
-        grid-template-columns: 1fr; /* 1 image per row */
+@media (max-width: 576px) {
+    .navbar-logo {
+        height: 50px;
+    }
+
+    .image-gallery figcaption {
+        font-size: 14px;
     }
 }
